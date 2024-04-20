@@ -1,0 +1,1107 @@
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 85px;
+        background-color: rgba(60, 60, 60, 0.4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+        z-index: 1000;
+        / Дополнительные стили для внешнего вида панели /
+        / ... /
+    }
+    .navbaralt {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 85px;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        / Дополнительные стили для внешнего вида панели /
+        / ... /
+    }
+
+
+
+
+.buttons-container {
+    position: absolute;
+    left: 190px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+}
+
+#customToggleButton {
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+    color: #fff;
+    margin-left: 10px; /* Отступ между кнопками */
+    padding: 6.4px 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#customToggleButton:hover {
+    background-color: rgba(256, 256, 256, 1);
+    color: #000;
+    border: 1px solid #fff;
+}
+
+#donatelink {
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+#donatelink:hover {
+    margin-top: -2px;
+    margin-left: -5px;
+    font-size: 18px;
+    box-shadow: 20px 20px 1000px 2000px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+
+
+.snowflake {
+  --size: 1vw;
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -5vh;
+  z-index: 2;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(var(--left-ini), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 110vh, 0);
+  }
+}
+.snowflake:nth-child(1) {
+  --size: 0.8vw;
+  --left-ini: 4vw;
+  --left-end: -3vw;
+  left: 13vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(2) {
+  --size: 0.6vw;
+  --left-ini: 10vw;
+  --left-end: 0vw;
+  left: 58vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(3) {
+  --size: 0.4vw;
+  --left-ini: -7vw;
+  --left-end: 0vw;
+  left: 72vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(4) {
+  --size: 1vw;
+  --left-ini: -5vw;
+  --left-end: 10vw;
+  left: 51vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(5) {
+  --size: 0.8vw;
+  --left-ini: 6vw;
+  --left-end: 7vw;
+  left: 67vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(6) {
+  --size: 0.4vw;
+  --left-ini: -6vw;
+  --left-end: 0vw;
+  left: 92vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(7) {
+  --size: 1vw;
+  --left-ini: 4vw;
+  --left-end: 10vw;
+  left: 14vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(8) {
+  --size: 0.2vw;
+  --left-ini: -1vw;
+  --left-end: -1vw;
+  left: 60vw;
+  animation: snowfall 7s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(9) {
+  --size: 0.2vw;
+  --left-ini: 9vw;
+  --left-end: 2vw;
+  left: 46vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(10) {
+  --size: 0.8vw;
+  --left-ini: -3vw;
+  --left-end: 7vw;
+  left: 19vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(11) {
+  --size: 1vw;
+  --left-ini: -6vw;
+  --left-end: -8vw;
+  left: 37vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(12) {
+  --size: 0.6vw;
+  --left-ini: 1vw;
+  --left-end: -9vw;
+  left: 67vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(13) {
+  --size: 0.8vw;
+  --left-ini: -7vw;
+  --left-end: 0vw;
+  left: 22vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(14) {
+  --size: 1vw;
+  --left-ini: 2vw;
+  --left-end: -1vw;
+  left: 18vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(15) {
+  --size: 0.2vw;
+  --left-ini: 8vw;
+  --left-end: 5vw;
+  left: 85vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(16) {
+  --size: 0.4vw;
+  --left-ini: 0vw;
+  --left-end: -5vw;
+  left: 64vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(17) {
+  --size: 0.2vw;
+  --left-ini: 9vw;
+  --left-end: 9vw;
+  left: 96vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(18) {
+  --size: 0.4vw;
+  --left-ini: 2vw;
+  --left-end: -2vw;
+  left: 81vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(19) {
+  --size: 0.6vw;
+  --left-ini: -2vw;
+  --left-end: -7vw;
+  left: 1vw;
+  animation: snowfall 7s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(20) {
+  --size: 0.2vw;
+  --left-ini: -1vw;
+  --left-end: -8vw;
+  left: 47vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(21) {
+  --size: 0.8vw;
+  --left-ini: 0vw;
+  --left-end: 3vw;
+  left: 22vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(22) {
+  --size: 0.4vw;
+  --left-ini: -5vw;
+  --left-end: -4vw;
+  left: 20vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(23) {
+  --size: 0.2vw;
+  --left-ini: -8vw;
+  --left-end: 8vw;
+  left: 59vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -8s;
+}
+
+.snowflake:nth-child(24) {
+  --size: 0.8vw;
+  --left-ini: -7vw;
+  --left-end: 8vw;
+  left: 6vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(25) {
+  --size: 0.8vw;
+  --left-ini: -4vw;
+  --left-end: -1vw;
+  left: 8vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(26) {
+  --size: 0.4vw;
+  --left-ini: -4vw;
+  --left-end: 2vw;
+  left: 70vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(27) {
+  --size: 0.6vw;
+  --left-ini: 8vw;
+  --left-end: 4vw;
+  left: 16vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -6s;
+}
+
+.snowflake:nth-child(28) {
+  --size: 0.2vw;
+  --left-ini: 6vw;
+  --left-end: 1vw;
+  left: 61vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(29) {
+  --size: 0.8vw;
+  --left-ini: 0vw;
+  --left-end: -7vw;
+  left: 89vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(30) {
+  --size: 0.8vw;
+  --left-ini: -9vw;
+  --left-end: 8vw;
+  left: 49vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(31) {
+  --size: 0.4vw;
+  --left-ini: -1vw;
+  --left-end: -1vw;
+  left: 13vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -3s;
+}
+
+.snowflake:nth-child(32) {
+  --size: 0.8vw;
+  --left-ini: 10vw;
+  --left-end: -1vw;
+  left: 76vw;
+  animation: snowfall 13s linear infinite;
+  animation-delay: -9s;
+}
+
+.snowflake:nth-child(33) {
+  --size: 0.8vw;
+  --left-ini: 4vw;
+  --left-end: 2vw;
+  left: 52vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -2s;
+}
+
+.snowflake:nth-child(34) {
+  --size: 0.2vw;
+  --left-ini: 8vw;
+  --left-end: -4vw;
+  left: 97vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -1s;
+}
+
+.snowflake:nth-child(35) {
+  --size: 1vw;
+  --left-ini: -8vw;
+  --left-end: -3vw;
+  left: 89vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -3s;
+}
+
+.snowflake:nth-child(36) {
+  --size: 0.6vw;
+  --left-ini: -9vw;
+  --left-end: -5vw;
+  left: 20vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(37) {
+  --size: 0.4vw;
+  --left-ini: 10vw;
+  --left-end: 6vw;
+  left: 57vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(38) {
+  --size: 0.4vw;
+  --left-ini: 0vw;
+  --left-end: 5vw;
+  left: 38vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(39) {
+  --size: 0.6vw;
+  --left-ini: -3vw;
+  --left-end: 9vw;
+  left: 85vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(40) {
+  --size: 0.4vw;
+  --left-ini: -9vw;
+  --left-end: -5vw;
+  left: 94vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(41) {
+  --size: 0.6vw;
+  --left-ini: -1vw;
+  --left-end: 4vw;
+  left: 99vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(42) {
+  --size: 0.6vw;
+  --left-ini: -9vw;
+  --left-end: 7vw;
+  left: 100vw;
+  animation: snowfall 14s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(43) {
+  --size: 0.6vw;
+  --left-ini: 7vw;
+  --left-end: 1vw;
+  left: 52vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(44) {
+  --size: 0.2vw;
+  --left-ini: -5vw;
+  --left-end: -9vw;
+  left: 19vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -8s;
+}
+
+.snowflake:nth-child(45) {
+  --size: 0.6vw;
+  --left-ini: 5vw;
+  --left-end: 7vw;
+  left: 85vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -4s;
+}
+
+.snowflake:nth-child(46) {
+  --size: 0.4vw;
+  --left-ini: -5vw;
+  --left-end: 5vw;
+  left: 3vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -7s;
+}
+
+.snowflake:nth-child(47) {
+  --size: 0.2vw;
+  --left-ini: -1vw;
+  --left-end: 8vw;
+  left: 98vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -8s;
+}
+
+.snowflake:nth-child(48) {
+  --size: 1vw;
+  --left-ini: -3vw;
+  --left-end: 6vw;
+  left: 98vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -10s;
+}
+
+.snowflake:nth-child(49) {
+  --size: 1vw;
+  --left-ini: -1vw;
+  --left-end: 0vw;
+  left: 20vw;
+  animation: snowfall 8s linear infinite;
+  animation-delay: -5s;
+}
+
+.snowflake:nth-child(50) {
+  --size: 0.8vw;
+  --left-ini: -1vw;
+  --left-end: 0vw;
+  left: 95vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -9s;
+}
+
+/* added small blur every 6 snowflakes*/
+.snowflake:nth-child(6n) {
+  filter: blur(1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #change-profile-button {
+                position: absolute;
+                width: 200px;
+                margin-top: 10px;
+                margin-left: 250px;
+                text-decoration: none;
+                background-color: #007bff;
+                color: #fff;
+                text-align: center;
+                padding: 3px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            #change-profile-button:hover {
+                background-color: #0056b3;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes fadeInTop {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .tb-img {
+                position: absolute;
+                margin-top: 5px;
+                margin-left: 5px;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .tb-img-account {
+                left: 15px;
+                top: 15px;
+                position: absolute;
+                width: 128px;
+                height: 128px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            #tb-text {
+                margin-top: 8px;
+                margin-left: 50px;
+                color: #fff;
+            }
+            #toggle-button {
+                right: 80px;
+                top: -5px;
+                z-index: 2;
+                position: absolute;
+                margin-top: 30px;
+                margin-right: 0;
+                width: auto;
+                height: 40px;
+                padding-right: 5px;
+                border-radius: 10px;
+                box-shadow: 0 0 0 #545454;
+                transition: 0.5s;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .usercontainer {
+                background-color: rgba(0, 0, 0, 0.4);
+                width: 500px;
+                animation: fadeInTop 0.3s ease;
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s;
+                padding: 50px;
+                z-index: 3;
+                position: absolute;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border-radius: 10px;
+                padding: 10px;
+                backdrop-filter: blur(10px);
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+                right: 80px;
+                top: 75px;
+            }
+            .usercontainer.show {
+                display: block;
+                opacity: 1;
+            }
+            #h2_text {
+                z-index: 1000;
+                margin-left: 160px;
+                margin-top: 10px;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+            #h3_text {
+                font-size: 18px;
+                margin-left: 150px;
+                margin-top: 80px;
+                color: #007bff;
+            }
+            #h4_text {
+                font-size: 18px;
+                margin-left: 150px;
+                color: #007bff;
+            }
+            #text {
+                margin-top: 10px;
+                margin-left: 150px;
+                color: #fff;
+                font-size: 18px;
+            }
+            #text2 {
+                margin-left: 150px;
+                color: #fff;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            #text3 {
+                margin-left: 150px;
+                color: #fff;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            #logout {
+                margin-bottom: 20px;
+                width: 90px;
+                position: absolute;
+                margin-top: 10px;
+                margin-left: 150px;
+                text-decoration: none;
+                color: #fff;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border-radius: 10px;
+                text-align: center;
+                transition: background-color 0.3s;
+                cursor: pointer;
+                border: 1px solid #fff;
+            }
+            #logout:hover {
+                background-color: #fff;
+                color: #000;
+            }
+            .delete-button {
+                background-color: transparent;
+                margin-bottom: 20px;
+                font-size: 16px;
+                margin-left: 150px;
+                border: 1px solid #dc3545;
+                color: #fff;
+                padding: 7px 7px;
+                border-radius: 10px;
+                transition: background-color 0.3s;
+                cursor: pointer;
+            }
+            .delete-button:hover {
+                background-color: rgba(168, 28, 50, 0.4);
+            }
+            #chat-button1 {
+                position: absolute;
+                z-index: 2;
+                top: 2090px;
+                right: 320px;
+                width: 160px;
+                border-radius: 5px;
+                background-color: #fff;
+                border: none;
+                color: #000;
+                font-style: 24px;
+                height: 25px;
+                opacity: 0;
+                animation: fadeIn 0.5s ease forwards;
+                transition: 0.3s;
+            }
+            #chat-button1:hover {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                bottom: 60px;
+                right: 320px;
+                width: 160px;
+                border-radius: 5px;
+                border: 1px solid #fff;
+                background-color: transparent;
+                color: #fff;
+                font-style: 24px;
+                height: 25px;
+                opacity: 0;
+                animation: fadeIn 0.5s ease forwards;
+                cursor: pointer;
+                
+            }
+            #registered-users {
+                margin-left: 30px;
+                margin-top: 20px;
+                color: #fff;
+                font-size: 18px;
+                z-index: 2;
+            }
+
+            #chat-button_alt:hover {
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.0);
+                border: 1px solid #fff;
+            }
+            #chat-button_alt {
+                padding: 7px;
+                border-color: none;
+                border-radius: 10px;
+                z-index: 2;
+                margin-top: 20px;
+                margin-left: 70px;
+                width: 240px;
+                height: 40px;
+                color: #000;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+                cursor: pointer;
+                border: 1px solid #fff;
+            }
+
+            .btn {
+                text-decoration: none;
+                border: 1px solid #9294f8;
+                position: relative;
+                overflow: hidden;
+            }
+            .btn:hover {
+                box-shadow: 1px 1px 25px 10px rgba(30, 144, 255, 0.4);
+            }
+            .btn:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(120deg, transparent, rgba(30, 144, 255, 0.4), transparent);
+                transition: all 650ms;
+            }
+            .btn:hover:before {
+                left: 100%;
+            }
+            .bot-message {
+                background-color: #4e5d6c;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                align-self: flex-start;
+                border-radius: 10px;
+                max-width: 70%;
+                position: relative;
+                opacity: 0;
+                animation: fadeIn 0.5s ease forwards;
+            }
+            .user-message {
+                background-color: #0084ff;
+                color: #fff;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                align-self: flex-end;
+                border-radius: 10px;
+                max-width: 70%;
+                position: relative;
+                opacity: 0;
+                animation: fadeIn 0.5s ease forwards;
+            }
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+            #chat-container {
+                z-index: 2;
+                position: absolute;
+                box-shadow: 0 0 10px #000;
+                scroll-behavior: smooth;
+                background-color: rgba(85, 85, 85, 0.3);
+                backdrop-filter: blur(10px);
+                border-color: #444;
+                color: #fff;
+                overflow-y: scroll;
+                padding: 10px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                max-height: 450px;
+                height: 60%;
+                max-width: 500px;
+                border-radius: 10px;
+                right: 30px;
+                bottom: 30px;
+
+                                scroll-behavior: smooth;
+                margin-top: 10px;
+                width: 100%;
+            }
+            .font {
+                font-family: Poppins, sans-serif;
+                color: #fff;
+            }
+            #chat-button {
+                color: #fff;
+                padding: 7px;
+                border-color: rgba(85, 85, 85, 0);
+                right: 320px;
+                top: -5px;
+                z-index: 2;
+                position: absolute;
+                margin: 20px;
+                width: 240px;
+                height: 40px;
+                color: #fff;
+                text-align: center;
+                background-color: rgba(85, 85, 85, 0.5);
+                border-radius: 10px;
+                box-shadow: 0 0 0 #545454;
+                transition: 0.5s;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+                cursor: pointer;
+            }
+            #chat-button:hover {
+                transition: 650ms all;
+                border-color: #1e90ff;
+                border-width: 1px;
+                box-shadow: 0 0 20px rgba(30, 144, 255, 1);
+                backdrop-filter: blur(10px);
+            }
+
+            #reg-button {
+                background-color: #dc3545;
+                color: #fff;
+                padding: 7px;
+                border: none;
+                right: 40px;
+                top: -5px;
+                z-index: 2;
+                position: absolute;
+                margin: 20px;
+                width: 160px;
+                height: 40px;
+                color: #fff;
+                text-align: center;
+                background-color: rgba(85, 85, 85, 0.5);
+                border-radius: 10px;
+                box-shadow: 0 0 0 #545454;
+                transition: 0.5s;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+            }
+            #reg-button:hover {
+                cursor: pointer;
+                background-color: #3f3f3f;
+            }
+            #auth-button {
+                background-color: #dc3545;
+                color: #fff;
+                padding: 7px;
+                border: none;
+                right: 210px;
+                top: -5px;
+                z-index: 2;
+                position: absolute;
+                margin: 20px;
+                width: 100px;
+                height: 40px;
+                color: #fff;
+                text-align: center;
+                background-color: rgba(85, 85, 85, 0.5);
+                border-radius: 10px;
+                box-shadow: 0 0 0 #545454;
+                transition: 0.5s;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+            }
+            #auth-button:hover {
+                cursor: pointer;
+                background-color: #3f3f3f;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .column {
+                margin-left: 10px;
+                border-radius: 10px;
+                float: left;
+                width: 30%;
+                padding: 10px;
+                height: 300px;
+            }
+            a:active {
+                color: #fff;
+            }
+            #chat-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            html {
+                overflow: hidden;
+            }
+
+            body {
+                overflow: hidden;
+                position: relative;
+                background-image: url(welcomebgr.png);
+                background-color: #222;
+                color: #222;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+            .aren {
+                margin-top: 30px;
+                text-align: center;
+                font-size: 24px;
+            }
+            .deskrip {
+                margin-top: 30px;
+                margin-bottom: 60px;
+                text-align: center;
+                font-size: 16px;
+            }
+            .title {
+                color: #fff;
+            }
+            .chat-wrapper {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            #message-input {
+                background-color: #333;
+                color: #fff;
+                border-color: #545454;
+                border-radius: 5px;
+                box-shadow: 0 0 0 #545454;
+                transition: 0.5s;
+            }
+            #message-input:hover {
+                box-shadow: 0 0 10px #545454;
+                border-color: #0084ff;
+                transition: 0.5s;
+            }
+            #message-input::placeholder {
+                color: #7a7a7a;
+            }
+            #send-button {
+                box-shadow: 0 0 0 #545454;
+                transition: 0.5s;
+                width: 150px;
+                background-color: #fff;
+                color: #1a1a1a;
+                margin-left: 15px;
+                border-radius: 5px;
+                transition: 0.5s !important;
+            }
+            .bot-message {
+                background-color: #4e5d6c;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                align-self: flex-start;
+                border-radius: 10px;
+            }
+            .error-message {
+                background-color: #ff3860;
+                color: #fff;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .image-list {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                padding: 0;
+                margin-right: -10px;
+                margin-top: 5px;
+            }
+            .underline {
+                text-decoration: underline dotted;
+            }
+            .message-image {
+                width: calc(100% - 10px);
+                max-width: 100%;
+                height: auto;
+                margin: 0 5px 5px 0;
+                border-radius: 5px;
+            }
+            .image-list li:last-child .message-image {
+                margin-right: 0;
+            }
